@@ -1,0 +1,226 @@
+/* ================================================= */
+/* 1. GERAL (Body e Links)                           */
+/* ================================================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #3D3F99;
+    background: linear-gradient(90deg, rgba(61, 63, 153, 1) 0%, rgba(14, 15, 34, 1) 100%);
+    color: white;
+}
+
+/* Tira o sublinhado e a cor azul de TODOS os links */
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+a:hover {
+    opacity: 0.8; /* Efeito leve ao passar o mouse */
+}
+
+/* ================================================= */
+/* 2. TOPO (HEADER) - Arrumado                       */
+/* ================================================= */
+.topo {
+    display: flex;
+    justify-content: space-between; /* Espalha: Logo na esq, Busca no meio, Icones na dir */
+    align-items: center;
+    padding: 15px 50px; /* Espaçamento interno */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil embaixo */
+    gap: 20px;
+}
+
+/* Imagens do topo (Logos e Ícones) */
+.topo img {
+    height: 60px; /* Tamanho padrão da logo */
+    width: auto;
+}
+
+/* Área dos ícones da direita (Carrinho, Chat, etc) */
+.imagem_topo_f {
+    display: flex;
+    gap: 20px; /* Espaço entre os ícones */
+    align-items: center;
+    filter: brightness(0) invert(1);
+}
+
+.iamgem_topo_barra_de_pesquisa { /* Sua classe original */
+    width: 30px;  /* Tamanho menor para os ícones */
+    height: auto;
+    cursor: pointer;
+}
+
+/* ================================================= */
+/* 3. BARRA DE PESQUISA                              */
+/* ================================================= */
+.search-container {
+    position: relative;
+    width: 400px; /* Largura da barra */
+}
+
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px 12px 45px; /* Espaço na esquerda para o ícone */
+    border: none;
+    border-radius: 30px; /* Borda bem redonda */
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+      width: 400px;
+    padding: 10px 15px 10px 40px; /* Espaço para o ícone na esquerda */
+    border-radius: 20px;
+    border: none;
+    background-image: url('img/64673.png'); /* Se tiver icone de lupa, coloque aqui */
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 15px;
+}
+
+/* ================================================= */
+/* 4. BOTÕES DO TOPO (Centralizados e Próximos)      */
+/* ================================================= */
+/* Aqui eu removi as divs de 700px que atrapalhavam */
+
+div.button_topo {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha se a tela for pequena */
+    justify-content: center; /* Centraliza tudo na tela */
+    gap: 10px; /* Distância entre os botões */
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+/* Removi .button_topo_esquerda e .button_topo_direita pois eles atrapalhavam a centralização */
+
+button {
+    background: linear-gradient(180deg, rgba(61, 63, 153, 1) 0%, rgba(14, 15, 34, 1) 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+button img {
+    height: 25px; /* Tamanho do ícone dentro do botão */
+    width: auto;
+    filter: brightness(0) invert(0);
+}
+
+button:hover {
+    background: linear-gradient(0deg, rgba(61, 63, 153, 1) 0%, rgba(14, 15, 34, 1) 100%);
+    border-radius: 10px;
+}
+
+/* ================================================= */
+/* 5. RODAPÉ (FOOTER / .ultimo)                      */
+/* ================================================= */
+.ultimo {
+    display: flex;
+    justify-content: center; /* Centraliza o rodapé */
+    align-items: center;
+    gap: 30px; /* Espaço entre os itens */
+    padding: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha em cima */
+    margin-top: 50px;
+}
+
+.ultimo img {
+    height: 50px; /* Logo do rodapé */
+}
+
+.ultimo button {
+    /* Reutiliza o estilo dos botões, mas se quiser mudar algo específico para o rodapé, faça aqui */
+    font-size: 12px;
+}
+
+/* ================================================= */
+/* 6. OUTROS ESTILOS (Meio, Login, etc)              */
+/* ================================================= */
+.meio1 {
+    display: flex;           /* Isso coloca os filhos (as imagens) lado a lado */
+    flex-wrap: wrap;         /* Permite quebra de linha se a tela for pequena */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 20px;               /* Espaço entre as imagens */
+    padding: 20px;           /* Espaçamento interno */
+    margin: 0 auto;
+}
+
+/* CSS para as TRÊS imagens de baixo ficarem lado a lado */
+.meio2 {
+    display: flex;           /* << A MUDANÇA ESTÁ AQUI */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;               /* << A MUDANÇA ESTÁ AQUI */
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;     /* Espaço para não colar no rodapé */
+}
+
+/* --- ESTILOS DAS IMAGENS --- */
+/* (Opcional, mas recomendado para controlar o tamanho) */
+
+/* Estilo para as DUAS imagens de cima */
+.imagem_meio {
+    width: 45%; /* Cada imagem ocupa 45% (assim cabem 2) */
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para as TRÊS imagens de baixo */
+.imagem_meio_baixo {
+    width: 30%; /* Cada imagem ocupa 30% (assim cabem 3) */
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.imagem_meio {
+    
+    height: auto;
+}
+
+.box_ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Fundo preto da caixa de login */
+    border-radius: 30px;
+    padding: 40px;
+    gap: 50px;
+    max-width: 900px;
+    margin: 50px auto; /* Centraliza a caixa na tela */
+}
+
+.box_login {
+    background: linear-gradient(180deg, rgba(61, 63, 153, 1) 0%, rgba(20, 20, 40, 1) 100%);
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: left;
+}
+
+.box_login h1 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.box_login input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+

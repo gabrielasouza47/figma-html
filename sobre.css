@@ -1,0 +1,242 @@
+/* --- GERAL --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(61,63,153);
+    background: linear-gradient(90deg, rgba(61, 63, 153, 1) 0%, rgba(14, 15, 34, 1) 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+/* --- 1. TOPO --- */
+.topo {
+    display: flex;
+    justify-content: space-between; /* Espalha: Logo esq, Busca centro, Icones dir */
+    align-items: center;
+    padding: 15px 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo-topo {
+    height: 60px;
+}
+
+.search-container {
+    flex: 1; /* Ocupa o espaço central */
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 400px;
+    padding: 10px 15px 10px 40px; /* Espaço para o ícone na esquerda */
+    border-radius: 20px;
+    border: none;
+    background-image: url('img/64673.png'); /* Se tiver icone de lupa, coloque aqui */
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 15px;
+}
+
+.icones_topo {
+    display: flex;
+    gap: 20px;
+}
+
+.icones_topo img {
+    height: 25px;
+    cursor: pointer;
+    filter: brightness(0) invert(1); /* Deixa icones brancos se forem pretos */
+}
+
+/* --- 2. MENU BOTOES --- */
+.menu-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.menu-botoes button {
+    background: linear-gradient(180deg, rgba(61, 63, 153, 1) 0%, rgba(14, 15, 34, 1) 100%);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 20%;
+    padding: 20px 30px;
+}
+
+.menu-botoes button img {
+    height: 20px;
+    filter: brightness(0) invert(0);
+}
+
+.menu-botoes button:hover {
+    opacity: 0.8;
+    background: linear-gradient(0deg, rgba(61, 63, 153, 1) 0%, rgba(14, 15, 34, 1) 100%);
+}
+
+/* --- 3. QUEM SOMOS --- */
+.secao-quem-somos {
+    display: flex;
+    align-items: center;     /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza na tela */
+    gap: 80px;               /* Distância entre Imagem e Texto */
+    max-width: 1200px;
+    margin: 60px auto;       /* Espaço em cima e embaixo */
+    padding: 0 20px;
+}
+
+.coluna-imagem img {
+    width: 250px;
+    height: auto;
+}
+
+.coluna-texto {
+    max-width: 600px;
+    text-align: justify; /* Texto quadradinho igual a imagem */
+}
+
+.coluna-texto h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.coluna-texto h4 {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* --- 4. LOGIN (O CARD PRETO) --- */
+.container-login-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.box-preta {
+    background-color: black;
+    width: 800px;
+    height: 350px; /* Altura fixa para ficar igual a imagem */
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Garante que o que estiver dentro não saia das bordas redondas */
+    padding: 0 50px; /* Espaço interno nas laterais */
+    justify-content: space-between;
+}
+
+/* Lado Esquerdo do Login (Logo) */
+.login-lado-logo {
+    text-align: center;
+}
+
+.login-lado-logo img {
+    width: 100px;
+}
+
+.login-lado-logo h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/* Lado Direito do Login (Caixa Roxa com Form) */
+.login-lado-form {
+    background: linear-gradient(180deg, rgba(61, 63, 153, 1) 0%, rgba(30, 30, 60, 1) 100%);
+    width: 350px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 1px solid #555;
+}
+
+.cabecalho-form {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.campos label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.campos input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box; /* Garante que padding não aumente largura */
+}
+
+.botao-entrar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-entrar {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* --- 5. RODAPE --- */
+.rodape {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    
+}
+
+.rodape img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.rodape button {
+    
+background: linear-gradient(180deg, rgba(61, 63, 153, 1) 0%, rgba(14, 15, 34, 1) 100%);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 20%;
+    padding: 10px 20px;
+
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado embaixo */
+    color: white;          /* Define a cor branca */
+}
+
+/* Garante que o link não fique roxo depois de clicado */
+a:visited {
+    color: white;
+}
